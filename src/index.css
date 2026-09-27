@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-nexora-deep-navy: #061a2e;
+  --color-nexora-navy: #0b2a4a;
+  --color-nexora-blue: #0878c9;
+  --color-nexora-cyan: #00afc7;
+  --color-nexora-green: #35c759;
+  --color-nexora-deep-green: #159447;
+  --color-nexora-light-bg: #f6fafc;
+  --color-nexora-dark-surface: #0b243d;
+  --color-nexora-dark-elevated: #123653;
+  --color-nexora-dark-border: #1d4968;
+  --color-nexora-light-border: #d7e5ed;
+
+  --color-brand-blue-50: #f0f9ff;
+  --color-brand-blue-100: #e0f2fe;
+  --color-brand-blue-200: #bae6fd;
+  --color-brand-blue-300: #7dd3fc;
+  --color-brand-blue-400: #38bdf8;
+  --color-brand-blue-500: #0ea5e9;
+  --color-brand-blue-600: #0284c7;
+
+  --color-brand-green-50: #f0fdf4;
+  --color-brand-green-100: #dcfce7;
+  --color-brand-green-200: #bbf7d0;
+  --color-brand-green-300: #86efac;
+  --color-brand-green-400: #4ade80;
+  --color-brand-green-500: #22c55e;
+  --color-brand-green-600: #16a34a;
+
+  /* Remap legacy amber/orange to Light Blue & Light Green theme */
+  --color-amber-50: #f0f9ff;
+  --color-amber-100: #e0f2fe;
+  --color-amber-200: #bae6fd;
+  --color-amber-300: #7dd3fc;
+  --color-amber-400: #38bdf8;
+  --color-amber-500: #0ea5e9;
+  --color-amber-600: #0284c7;
+  --color-amber-700: #0369a1;
+  --color-amber-800: #075985;
+  --color-amber-900: #0c4a6e;
+  --color-amber-950: #082f49;
+
+  --color-orange-50: #f0fdf4;
+  --color-orange-100: #dcfce7;
+  --color-orange-200: #bbf7d0;
+  --color-orange-300: #86efac;
+  --color-orange-400: #4ade80;
+  --color-orange-500: #22c55e;
+  --color-orange-600: #16a34a;
+  --color-orange-700: #15803d;
+  --color-orange-800: #166534;
+  --color-orange-900: #14532d;
+  --color-orange-950: #052e16;
+}
+
+/* Light Theme Variables (Light Blue, White, and Light Green - Ultra Professional & Legible) */
+html.light,
+:root:not(.dark) {
+  --color-slate-950: #f8fafc; /* Crisp, ultra-clean neutral canvas */
+  --color-slate-900: #ffffff; /* Pure crisp white cards, modals, headers */
+  --color-slate-800: #e2e8f0; /* Crisp structural borders with subtle tint */
+  --color-slate-700: #cbd5e1; /* Secondary borders & dividers */
+  --color-slate-600: #64748b; /* Muted helper & subtitle text (WCAG AA compliant) */
+  --color-slate-500: #475569; /* Secondary body & label text */
+  --color-slate-400: #334155; /* Highly legible body text */
+  --color-slate-300: #1e293b; /* High contrast body & card text */
+  --color-slate-200: #0f172a; /* Subheadings */
+  --color-slate-100: #020617; /* Deepest contrast for main headings & brand */
+  --color-slate-50: #000000;
+
+  /* Theme Accents in Light Mode */
+  --color-amber-50: #f0f9ff;
+  --color-amber-100: #e0f2fe;
+  --color-amber-200: #bae6fd;
+  --color-amber-300: #7dd3fc;
+  --color-amber-400: #0284c7; /* High contrast light blue */
+  --color-amber-500: #0284c7; /* Primary light blue */
+  --color-amber-600: #0369a1;
+
+  --color-orange-400: #16a34a;
+  --color-orange-500: #15803d; /* High contrast light green */
+}
+
+/* Dark Theme Variables (Deep Navy Slate with Luminous Light Blue & Light Green) */
+html.dark {
+  --color-slate-950: #070e1a;
+  --color-slate-900: #0d1728;
+  --color-slate-800: #17253d;
+  --color-slate-700: #223758;
+  --color-slate-600: #475d80;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #bae6fd;
+  --color-slate-100: #38bdf8; /* Luminous Light Blue (was #f8fafc) */
+  --color-slate-50: #7dd3fc;  /* Bright Light Blue (was #ffffff) */
+
+  --color-amber-400: #38bdf8;
+  --color-amber-500: #0ea5e9;
+  --color-orange-400: #4ade80;
+  --color-orange-500: #22c55e;
+}
+
+/* ============================================================
+   NEXORA O&G ENTERPRISE COLOR SYSTEM & ACCESSIBILITY CONTRAST
+   ============================================================ */
+
+/* Primary brand enterprise accents */
+:root {
+  --nexora-navy: #082746;
+  --nexora-blue: #0A78B5;
+  --nexora-teal: #00A6A6;
+  --nexora-green: #32B86A;
+  --nexora-white: #FFFFFF;
+  --nexora-light-bg: #F4F8FA;
+  --nexora-nav-text: #082746;
+  --nexora-active-text: #FFFFFF;
+  --nexora-active-bg: #0A78B5;
+}
+
+/* Ensure buttons with blue, teal, green, dark navy, or gradient backgrounds ALWAYS have readable white text & icons */
+button[class*="bg-[#0A78B5]"],
+button[class*="bg-[#0B78B5]"],
+button[class*="bg-[#00A6A6]"],
+button[class*="bg-[#32B86A]"],
+button[class*="bg-[#082746]"],
+button[class*="bg-[#123B63]"],
+button[class*="from-[#0A78B5]"],
+button[class*="from-sky-500"],
+button[class*="from-[#082746]"],
+button[class*="bg-sky-600"],
+button[class*="bg-teal-600"],
+button[class*="bg-emerald-600"],
+.btn-primary,
+.bg-primary-btn {
+  color: #ffffff !important;
+}
+
+button[class*="bg-[#0A78B5]"] svg,
+button[class*="bg-[#0B78B5]"] svg,
+button[class*="bg-[#00A6A6]"] svg,
+button[class*="bg-[#32B86A]"] svg,
+button[class*="bg-[#082746]"] svg,
+button[class*="bg-[#123B63]"] svg,
+button[class*="from-[#0A78B5]"] svg,
+button[class*="from-sky-500"] svg,
+button[class*="from-[#082746]"] svg,
+button[class*="bg-sky-600"] svg,
+button[class*="bg-teal-600"] svg,
+button[class*="bg-emerald-600"] svg {
+  color: #ffffff !important;
+}
+
+/* High-contrast status badge safeguards */
+.badge-blue,
+.badge-status-blue {
+  background-color: #0A78B5 !important;
+  color: #ffffff !important;
+}
+
+.badge-green,
+.badge-status-green {
+  background-color: #32B86A !important;
+  color: #ffffff !important;
+}
+
+.badge-critical,
+.badge-status-critical {
+  background-color: #e11d48 !important;
+  color: #ffffff !important;
+}
+
+/* Red alert badge safeguards */
+.bg-rose-600,
+.bg-rose-700,
+.bg-red-600,
+.bg-red-700 {
+  color: #ffffff !important;
+}
+
+body {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Tabular figures discipline for numbers, currency, and IDs */
+.tabular-nums, .font-mono, kbd, code, pre {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Headline balance */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.4);
+}
+

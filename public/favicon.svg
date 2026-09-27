@@ -1,0 +1,44 @@
+<svg width="64" height="64" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nexoraBlueRibbonFav" x1="20%" y1="90%" x2="80%" y2="10%">
+      <stop offset="0%" stop-color="#061A2E" />
+      <stop offset="35%" stop-color="#0B2A4A" />
+      <stop offset="70%" stop-color="#0878C9" />
+      <stop offset="100%" stop-color="#00AFC7" />
+    </linearGradient>
+
+    <linearGradient id="nexoraDropletFav" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#00AFC7" />
+      <stop offset="60%" stop-color="#0878C9" />
+      <stop offset="100%" stop-color="#061A2E" />
+    </linearGradient>
+
+    <linearGradient id="nexoraFoldSweepFav" x1="10%" y1="20%" x2="90%" y2="80%">
+      <stop offset="0%" stop-color="#0878C9" />
+      <stop offset="45%" stop-color="#00AFC7" />
+      <stop offset="75%" stop-color="#35C759" />
+      <stop offset="100%" stop-color="#159447" />
+    </linearGradient>
+
+    <linearGradient id="nexoraRightPillarFav" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#35C759" />
+      <stop offset="60%" stop-color="#1EB451" />
+      <stop offset="100%" stop-color="#0E7535" />
+    </linearGradient>
+  </defs>
+
+  <rect width="160" height="160" rx="36" fill="#061A2E" />
+
+  <!-- 1. RIGHT PILLAR -->
+  <path d="M98 28L122 18V130C122 135 117 139 112 139L98 132V28Z" fill="url(#nexoraRightPillarFav)" />
+
+  <!-- 2. INNER OIL DROPLET -->
+  <path d="M74 72C74 72 61 95 61 106C61 117.5 69.5 125 79.5 125C89.5 125 98 117.5 98 106C98 95 74 72 74 72Z" fill="url(#nexoraDropletFav)" />
+  <ellipse cx="73" cy="102" rx="4" ry="9" transform="rotate(-25 73 102)" fill="#FFFFFF" opacity="0.4" />
+
+  <!-- 3. LEFT MAIN ARCHING RIBBON -->
+  <path d="M38 126V42C38 30 50 20 64 24C78 28 88 42 76 66C66 86 52 82 52 108V126C52 130 45 133 41 130L38 126Z" fill="url(#nexoraBlueRibbonFav)" />
+
+  <!-- 4. DIAGONAL 3D FOLD SWEEPING INTO GREEN TAPERED LEAF TIP -->
+  <path d="M58 24C78 22 104 44 116 66C128 88 139 104 148 109C134 114 112 104 96 84C82 66 68 44 58 24Z" fill="url(#nexoraFoldSweepFav)" />
+</svg>

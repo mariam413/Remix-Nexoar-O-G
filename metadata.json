@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix NEXORA O\u0026G",
+  "description": "AI-Powered Critical Materials \u0026 Procurement Intelligence for Oil \u0026 Gas Operations. Predict the spare. Secure the supply. Protect production.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
